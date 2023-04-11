@@ -27,9 +27,7 @@ nbtrain = modelNB.fit(x_train, y_train)
 im = Image.open("./images/logoupb.png")
 st.set_page_config(
     page_title="Prediksi Kelulusan",
-    page_icon=im,
-    layout="wide",
-    initial_sidebar_state="expanded"
+    page_icon=im
 )
 
 st.image(im, width=120)
