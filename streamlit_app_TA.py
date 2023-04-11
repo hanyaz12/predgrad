@@ -35,3 +35,8 @@ prediksi = st.button("Prediksi")
 if prediksi:
     hasil = nbtrain.predict([[ip1, ip2, ip3, ip4]])
     st.success(f"Lulus tepat waktu : {hasil[0]}")
+
+st.write('Muhamad Ridwan')
+st.write('312010026')
+st.write('Universitas Pelita Bangsa')
+st.write('2023')
