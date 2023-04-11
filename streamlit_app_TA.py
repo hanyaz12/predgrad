@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
 from PIL import Image
-df = pd.read_csv(".\data\data_lulus_tepat_waktu.csv")
+df = pd.read_csv("./data/data_lulus_tepat_waktu.csv")
 
 # hapus kolom ‘tepat’ dalam dataset lalu masukan ke variabel x
 x = df.drop(["tepat"], axis=1)
@@ -24,7 +24,7 @@ modelNB = GaussianNB()
 nbtrain = modelNB.fit(x_train, y_train)
 
 # streamlit
-im = Image.open(".\images\logoupb.png")
+im = Image.open("./images/logoupb.png")
 st.set_page_config(
     page_title="Prediksi Kelulusan",
     page_icon=im,
