@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
 
-df = pd.read_csv("data_lulus_tepat_waktu.csv")
+df = pd.read_csv("data\data_lulus_tepat_waktu.csv")
 
 # hapus kolom ‘tepat’ dalam dataset lalu masukan ke variabel x
 x = df.drop(["tepat"], axis=1)
@@ -24,6 +24,15 @@ modelNB = GaussianNB()
 nbtrain = modelNB.fit(x_train, y_train)
 
 # streamlit
+
+st.set_page_config(
+    page_title="Prediksi Kelulusan",
+    page_icon="images\upb.png",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+
 st.title('Prediksi Kelulusan')
 ip1 = st.number_input('Masukkan IP Semester 1', 0.0)
 ip2 = st.number_input('Masukkan IP Semester 2', 0.0)
