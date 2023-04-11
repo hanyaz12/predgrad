@@ -32,10 +32,10 @@ st.set_page_config(
 
 st.image(im, width=120)
 st.title('Prediksi Kelulusan')
-ip1 = st.number_input('Masukkan IP Semester 1', 0.0, 4.0)
-ip2 = st.number_input('Masukkan IP Semester 2', 0.0, 4.0)
-ip3 = st.number_input('Masukkan IP Semester 3', 0.0, 4.0)
-ip4 = st.number_input('Masukkan IP Semester 4', 0.0, 4.0)
+ip1 = st.number_input('Input IP Semester 1', 0.0, 4.0)
+ip2 = st.number_input('Input IP Semester 2', 0.0, 4.0)
+ip3 = st.number_input('Input IP Semester 3', 0.0, 4.0)
+ip4 = st.number_input('Input IP Semester 4', 0.0, 4.0)
 
 prediksi = st.button("Prediksi")
 
