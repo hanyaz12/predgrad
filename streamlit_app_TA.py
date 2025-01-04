@@ -24,13 +24,7 @@ modelNB = GaussianNB()
 nbtrain = modelNB.fit(x_train, y_train)
 
 # streamlit
-im = Image.open("./images/logoupb.png")
-st.set_page_config(
-    page_title="Prediksi Kelulusan",
-    page_icon=im
-)
 
-st.image(im, width=120)
 st.title('Prediksi Kelulusan')
 ip1 = st.number_input('Input IP Semester 1', 0.0, 4.0)
 ip2 = st.number_input('Input IP Semester 2', 0.0, 4.0)
@@ -44,13 +38,3 @@ if prediksi:
     st.success(f"Lulus tepat waktu : {hasil[0]}")
 
 
-st.markdown("<br>",
-            unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'><b>Muhamad Ridwan</b></p>",
-            unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'><b>312010026</b></p>",
-            unsafe_allow_html=True)
-st.markdown("<h4 style='text-align: center;'><b>Universitas Pelita Bangsa</b></h4>",
-            unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: center;'><b>2023</b></h5>",
-            unsafe_allow_html=True)
