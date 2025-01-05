@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
 from PIL import Image
-df = pd.read_csv("./data/data_lulus_tepat_waktu.csv")
+df = pd.read_csv("./data/Dataset_IPS.csv")
 
 # hapus kolom ‘tepat’ dalam dataset lalu masukan ke variabel x
 x = df.drop(["tepat"], axis=1)
@@ -15,7 +15,7 @@ y = df["tepat"]
 
 # split train dan test
 
-x_train, x_test, y_train, y_test = train_test_split(x, y)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
 
 # latih model dengan Gaussian Naïve Bayes
 
@@ -25,7 +25,7 @@ nbtrain = modelNB.fit(x_train, y_train)
 
 # streamlit
 
-st.title('Prediksi Kelulusan')
+st.title('Prediksi Ketepatan Waktu Lulus Mahasiswa')
 ip1 = st.number_input('Input IP Semester 1', 0.0, 4.0)
 ip2 = st.number_input('Input IP Semester 2', 0.0, 4.0)
 ip3 = st.number_input('Input IP Semester 3', 0.0, 4.0)
